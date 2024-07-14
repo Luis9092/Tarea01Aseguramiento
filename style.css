@@ -11,9 +11,13 @@ body {
 .titulo {
   position: relative;
   text-align: justify;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-shadow: 1px -1px 4px rgba(85, 85, 85, 0.55);
-  background-image: linear-gradient(to top, #85efa8 -45%, hsl(0, 0%, 100%) 100%);
+  background-image: linear-gradient(
+    to top,
+    #85efa8 -45%,
+    hsl(0, 0%, 100%) 100%
+  );
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   padding: 10px;
@@ -35,21 +39,27 @@ body {
   padding: 20px;
   border-radius: 10px;
   background-color: rgb(222, 220, 220);
-  background-image: linear-gradient(to top, #85efa8 -45%, hsl(0, 0%, 100%) 100%);
+  background-image: linear-gradient(
+    to top,
+    #85efa8 -45%,
+    hsl(0, 0%, 100%) 100%
+  );
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+  font-size: 1.2rem;
 }
 .container .table thead tr {
   /* background-color: rebeccapurple; */
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 10px;
+  
 }
 
-.container .table tbody {
+/* .container .table tbody {
   font-size: 1.2rem;
-}
+} */
 .container .table tbody tr td ul {
   display: flex;
   flex-direction: column;
@@ -57,7 +67,7 @@ body {
 }
 
 .container .table tbody tr td ul li {
-  font-size: 1.2rem;
+
   margin: 10px 10px;
   list-style: decimal-leading-zero;
   text-align: justify;
@@ -128,23 +138,49 @@ footer label {
   filter: blur(10px);
 }
 
-
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
-  
-  @keyframes slideIn {
-    0% {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  100% {
+    opacity: 1;
   }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 991px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 710px) {
+  .container .table {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 410px) {
+  .titulo {
+    font-size: 14px;
+  }
+  .container .table {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  body {
+    height: 100%;
+  }
+}
